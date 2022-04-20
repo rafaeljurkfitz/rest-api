@@ -1,0 +1,22 @@
+{
+  "name": "teleagenda",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "dev": "nodemon server.js"
+  },
+  "keywords": [],
+  "author": "Rafael Jurkfitz",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.17.3",
+    "sequelize": "^6.17.0",
+    "sqlite": "^4.0.25",
+    "sqlite3": "^5.0.2"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.15",
+    "sequelize-cli": "^6.4.1"
+  }
+}

@@ -1,0 +1,8 @@
+.vscode
+build
+npm-debug.log
+.env
+.DS_Store
+development.db
+package-lock.json
+node_modules
