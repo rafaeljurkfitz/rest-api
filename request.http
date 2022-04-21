@@ -3,8 +3,8 @@ POST http://localhost:3333/adicionarUsuario
 content-type: application/json
 
     {
-        "login": "jose_silva",
-        "password": "123456"
+        "login": "soldier",
+        "password": "666"
     }
 
 ###
