@@ -5,20 +5,20 @@ module.exports = {
 
         await queryInterface.bulkInsert('users', [
         {
-            login: 'xxxgafeu',
-            password: 'comandantesupremo666',
+            login: 'Jose_Silva45',
+            password: '@jgl52846',
             createdAt: new Date(),
             updatedAt: new Date(),
         },
         {
-            login: 'teste2',
-            password: 'senhasteste',
+            login: 'MariaEduarda852',
+            password: '2584563214',
             createdAt: new Date(),
             updatedAt: new Date(),
         },
         {
-            login: 'anarcobaixista',
-            password: 'euamoamari',
+            login: 'GuilhermeRocha52',
+            password: 'umapontenomeiodocaminho',
             createdAt: new Date(),
             updatedAt: new Date(),
         }
