@@ -34,7 +34,7 @@
 6.  ✅ - Validar as requisições básicas de HTTP através de JSON; 
 7.  ✅ - POST,GET,PUT e DELETE;
 8.  ✅ - Executar uma requisição HTTP envolvendo relação de tabelas; 
-9.  ❌ - Adicionar alguma ferramenta para armazenar e acessar a senha do usuario como hash;
+9.  ✅ - Adicionar alguma ferramenta para armazenar e acessar a senha do usuario como hash;
 11. ❌ - Criar um ReportController para requisições mais complexas dos dados do banco;
 ...
 
