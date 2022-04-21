@@ -1,9 +1,12 @@
 const User = require('../models').Users;
+const passwordHash = require('password-hash');
 
 module.exports = {
     //Metodo POST - Criar usuario.
     async store(req, res) {
-        const { login, password } = req.body;
+        let { login, password } = req.body;
+        //hash the password
+        password = passwordHash.generate(password);
         const user = await User.create({ login, password });
         return res.json(user);
     },
@@ -11,7 +14,6 @@ module.exports = {
     //Metodo GET - Listar todos usuarios.
     async index(req, res) {
         const users = await User.findAll();
-        console.log(users);
         return res.json(users);
     },
 
@@ -21,10 +23,11 @@ module.exports = {
         return res.json(user);
     },
 
-    //Metodo PUT - Alterar usuario por id.
+    //Metodo PUT - Alterar dados do usuario por id.
     async update_id(req, res) {
         const user = await User.findByPk(req.params.id);
-        const { login, password } = req.body;
+        let { login, password } = req.body;
+        password = passwordHash.generate(password);
         await user.update({
             login: login,
             password: password
