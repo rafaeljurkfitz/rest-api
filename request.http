@@ -1,10 +1,13 @@
+//ARQUIVO PARA FAZER REQUISIÇÕES HTTP
+//----------------------------------------------------------------------------------------------------------------------
+//Usuario REQUESTS
 //Criar Usuario
 POST http://localhost:3333/adicionarUsuario
 content-type: application/json
 
     {
-        "login": "soldier",
-        "password": "666"
+        "login": "UsuarioTeste",
+        "password": "Senh@Teste258456"
     }
 
 ###
@@ -14,13 +17,38 @@ GET http://localhost:3333/listarUsuarios
 
 ###
 
+//Listar um usuario
+GET http://localhost:3333/listarUsuario/1
+
+###
+//Editar Usuario
+PUT http://localhost:3333/editarUsuario/1
+content-type: application/json
+
+    {
+        "login": "UsuarioParaTeste",
+        "password": "Senh@Teste258456"
+    }
+
+###
+//Deletar Usuario
+DELETE http://localhost:3333/deletarUsuario/1
+
+###
+//Listar o login do usuario e todos os seus contatos - ASSOCIACAO N-N
+GET http://localhost:3333/listarUsuarioContatos/1
+
+###
+
+//-----------------------------------------------------------------------------
+//Contato REQUESTS
 //Criar Contato
 POST http://localhost:3333/adicionarContato
 content-type: application/json
 
 {
-    "name" : "Rafael",
-    "email" : "rafael@teste.com.br",
+    "name" : "Nome do contato 1",
+    "email" : "contato1@teste.com.br",
     "phone_number" : "1236987414",
     "image_url" : "./images"
 }
@@ -33,7 +61,7 @@ GET http://localhost:3333/listarContatos
 ###
 
 //Listar contato pelo id, passando o numero de id como parametro na url.
-GET http://localhost:3333/listarContato/5
+GET http://localhost:3333/listarContato/1
 
 ###
 
@@ -42,9 +70,9 @@ PUT http://localhost:3333/alterarContato/1
 content-type: application/json
 
 {
-    "name" : "Gabriel",
-    "email" : "Rodrigo@teste.com.br",
-    "phone_number" : "66668888552",
+    "name" : "Nome do contato 1",
+    "email" : "contato1@teste.com.br",
+    "phone_number" : "1236987414",
     "image_url" : "./images"
 }
 
@@ -52,8 +80,3 @@ content-type: application/json
 
 //Deletar contato pelo id, passando o numero de id como parametro na url.
 DELETE http://localhost:3333/deletarContato/2
-
-###
-
-//Listar o login do usuario e todos os seus contatos - ASSOCIACAO N-N
-GET http://localhost:3333/listarUsuarioContatos/1
