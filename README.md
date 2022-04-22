@@ -49,7 +49,30 @@
 
 ## 🚀 Deploy
 
+1. Instale os npm packages da aplicação.
 
+```bash
+   npm install
+```
+
+2. Execute as migrations para criar as tabelas do banco.
+
+```bash
+   sequelize db:migrate
+```
+
+3. Execute as seeders para popular as tabelas do banco com alguns dados para testes.
+
+```bash
+   sequelize db:seed:all
+```
+
+4. Inicie o servidor pelo nodemoon.
+```bash
+   npm run dev
+```
+
+5. Faça os testes de requisições pelo arquivo request.http 
 
 ## 💻 Getting started
 
